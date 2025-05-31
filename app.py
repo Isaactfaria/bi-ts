@@ -152,8 +152,8 @@ else:
         
         # Botão para recarregar os dados
         if st.button("Atualizar Vendas do Dia"):
-            st.cache_data.clear() # Limpa o cache para buscar dados frescos
-            st.experimental_rerun() # Recarrega a página para exibir os novos dados
+           # st.cache_data.clear() # Limpa o cache para buscar dados frescos
+           # st.experimental_rerun() # Recarrega a página para exibir os novos dados
 
         vendas = get_vendas_do_dia(st.session_state.access_token)
 
