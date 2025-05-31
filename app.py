@@ -37,7 +37,7 @@ def exchange_code_for_token(code):
         "redirect_uri": REDIRECT_URI
     }
     response = requests.post(TOKEN_URL, headers=headers, data=data)
-    response.raise_for_status()
+    response.raise_for_status() # Lança uma exceção para códigos de status HTTP de erro (4xx ou 5xx)
     return response.json()
 
 def refresh_access_token(refresh_token):
